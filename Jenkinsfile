@@ -8,6 +8,12 @@ pipeline {
     SSH_CREDENTIALS_ID = "ec2-ssh-key"
   }
 
+  stage('Trust GitHub Host') {
+  steps {
+    sh 'mkdir -p ~/.ssh && ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts'
+        }
+    }
+
   stages {
 
     stage('Checkout Code') {
