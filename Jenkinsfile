@@ -3,9 +3,9 @@ pipeline {
 
   environment {
     EC2_USER = "ec2-user"
-    EC2_HOST = "1.2.3.4"
+    EC2_HOST = "3.26.15.32"
     REMOTE_DIR = "/home/ec2-user/ifa-frontend"
-    SSH_CREDENTIALS_ID = "ec2-ssh-key"
+    SSH_CREDENTIALS_ID = "ifa-ssh-key"
   }
 
   stages {
