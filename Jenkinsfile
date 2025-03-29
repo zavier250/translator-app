@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     EC2_USER = "ec2-user"
-    EC2_HOST = "52.65.120.250"
+    EC2_HOST = ${INSTANCE_IP}
     REMOTE_DIR = "/home/ec2-user/ifa-frontend"
     SSH_CREDENTIALS_ID = "ifa-ssh-key"
   }
